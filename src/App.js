@@ -1,8 +1,8 @@
 // our imports from react as well as the components in use
 import React from 'react';
-import Header from './components/Header'
-import Board from "./components/Board"
-import Square from './components/Square';
+// import Header from './components/Header'
+import Board from './components/Board'
+// import Square from './components/Square';
 
 import './App.css';
 
@@ -10,10 +10,13 @@ import './App.css';
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <Header />
-        <Board />
-        <Square />
+      <div className="game">
+        <div className="game-board">
+          <Board />
+        </div>
+        <div className="game-info">
+          <div></div>
+        </div>
       </div>
     )
   }
