@@ -1,2 +1,17 @@
 
+.game {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.square {
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+}
+
+.board-row {
+    display:flex;
+}
