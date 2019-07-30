@@ -1,0 +1,38 @@
+[
+    {
+        "iconImage": "./assets/images/001-chat.png"
+    },
+    {
+        "iconImage": "./assets/images/002-piggy bank.png"
+    },
+    {
+        "iconImage": "./assets/images/004-tree.png"
+    },
+    {
+        "iconImage": "./assets/images/005-watering.png"
+    },
+    {
+        "iconImage": "./assets/images/008-planet earth.png"
+    },
+    {
+        "iconImage": "./assets/images/009-butterfly.png"
+    },
+    {
+        "iconImage": "./assets/images/010-bottle.png"
+    },
+    {
+        "iconImage": "./assets/images/011-electric car.png"
+    },
+    {
+        "iconImage": "./assets/images/012-mill.png"
+    },
+    {
+        "iconImage": "./assets/images/018-ecology.png"
+    },
+    {
+        "iconImage": "./assets/images/021-water.png"
+    },
+    {
+        "iconImage": "./assets/images/022-green energy.png"
+    }
+]
