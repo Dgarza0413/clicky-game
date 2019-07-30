@@ -2,11 +2,21 @@ img{
     width: 100%;
 }
 
+nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
 .game {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.game-board {
+    column-count: 4;
 }
 
 .square{
@@ -16,6 +26,16 @@ img{
     margin: 20px;
     box-sizing: border-box;
     padding: 9%;
+}
+
+.square:hover{
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
+    
+}
+
+.square:nth-child(1){
+    margin-top:0px;
 }
 
 .board-row {

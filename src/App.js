@@ -1,6 +1,6 @@
 // our imports from react as well as the components in use
 import React from 'react';
-// import Header from './components/Header'
+import Header from './components/Header'
 // import Board from './components/Board'
 import Square from './components/Square';
 
@@ -22,6 +22,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="game">
+        <Header />
         <div className="game-board">
           {
             this.state.icons.map(i =>
