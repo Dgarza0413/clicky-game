@@ -1,38 +1,74 @@
 [
     {
-        "iconImage": "./assets/images/001-chat.png"
+        "id": 1,
+        "iconImage": "./assets/images/001-chat.png",
+        "value": false,
+        "test": ""
     },
     {
-        "iconImage": "./assets/images/002-piggy bank.png"
+        "id": 2,
+        "iconImage": "./assets/images/002-piggy bank.png",
+        "value": false,
+        "test": ""
     },
     {
-        "iconImage": "./assets/images/004-tree.png"
+        "id": 3,
+        "iconImage": "./assets/images/004-tree.png",
+        "value": false,
+        "test": ""
     },
     {
-        "iconImage": "./assets/images/005-watering.png"
+        "id": 4,
+        "iconImage": "./assets/images/005-watering.png",
+        "value": false,
+        "test": ""
     },
     {
-        "iconImage": "./assets/images/008-planet earth.png"
+        "id": 5,
+        "iconImage": "./assets/images/008-planet earth.png",
+        "value": false,
+        "test": ""
     },
     {
-        "iconImage": "./assets/images/009-butterfly.png"
+        "id": 6,
+        "iconImage": "./assets/images/009-butterfly.png",
+        "value": false,
+        "test": ""
     },
     {
-        "iconImage": "./assets/images/010-bottle.png"
+        "id": 7,
+        "iconImage": "./assets/images/010-bottle.png",
+        "value": false,
+        "test": ""
     },
     {
-        "iconImage": "./assets/images/011-electric car.png"
+        "id": 8,
+        "iconImage": "./assets/images/011-electric car.png",
+        "value": false,
+        "test": ""
     },
     {
-        "iconImage": "./assets/images/012-mill.png"
+        "id": 9,
+        "iconImage": "./assets/images/012-mill.png",
+        "value": false,
+        "test": ""
     },
     {
-        "iconImage": "./assets/images/018-ecology.png"
+        "id": 10,
+        "iconImage": "./assets/images/018-ecology.png",
+        "value": false,
+        "test": ""
     },
     {
-        "iconImage": "./assets/images/021-water.png"
+        "id": 11,
+        "iconImage": "./assets/images/021-water.png",
+        "value": false,
+        "test": ""
     },
     {
-        "iconImage": "./assets/images/022-green energy.png"
+        "id": 12,
+        "iconImage": "./assets/images/022-green energy.png",
+        "value": false,
+        "test": ""
     }
 ]

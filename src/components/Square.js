@@ -2,10 +2,16 @@ import React from "react"
 
 function Square(props) {
     return (
-        <div className="square" onClick={() => props.clickSquare()}>
-            <img alt="" src={props.iconImage} />
+        <div>
+            {props.icons.map(icon => (
+                <div className="square">
+                    <img alt="" src={icon.iconImage} />
+                    <p>value: {icon.test}</p>
+                </div>
+            ))}
         </div>
     )
 }
 
-export default Square
+
+export default Square;
