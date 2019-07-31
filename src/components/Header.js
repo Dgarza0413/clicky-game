@@ -1,13 +1,12 @@
 import React from "react"
 
-function Header() {
+function Header(props) {
     return (
         <div>
             <nav>
                 Clicky Earth
-                <span>wins</span>
-                <span>loss</span>
-                <span>points</span>
+                <span>Score {props.score}</span>
+                <span>High Score: {props.highScore}</span>
             </nav>
         </div>
     )

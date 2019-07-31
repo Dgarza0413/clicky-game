@@ -6,42 +6,64 @@ import icons from '../icons.json';
 
 // we declare our class App react.component as our parent component
 class Board extends React.Component {
-    state = { icons }
-
-    clickSquare = () => {
-        (!this.state.value)
-            ? this.setState({
-                value: true,
-                test: "on"
-            })
-            : this.setState({
-                value: false,
-                test: "off"
-            })
-        //i have to target the specific id to change the items boolean
+    state = {
+        icons,
+        highScore: 0,
+        score: 0,
+        selected: []
     }
 
-    randomize = () => {
-        const x = this.state.icons.length
-        for (let i = x.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [x[i], x[j]] = [x[j], x[i]]
-            console.log([x])
-        }
-        console.log(x)
-        return x;
+    setValue = (id) => {
+        this.setState({
+            points: this.state.points + 1
+        })
     }
 
+    clickSquare = (id) => {
+        const value = this.state.icons.filter(value => value.id !== id)
+        this.setState({
+            value,
+            score: this.state.score + 1,
+            selected: this.value
+        })
+        randomize(this.state.icons)
+        // this.pointCounter()
+        // console.log(value)
+        // console.log(this.state.icons)
+        // console.log(this.state.iconsValue)
+        console.log(this.state.selected)
+    };
     render() {
         return (
             <div className="game">
-                <Header />
+                <Header score={this.state.score} />
                 <div className="game-board">
-                    <Square icons={this.state.icons} />
+                    {this.state.icons.map(icon => (
+                        <Square key={icon.id}
+                            id={icon.id}
+                            value={icon.value}
+                            iconImage={icon.iconImage}
+                            clickSquare={this.clickSquare}
+                            randomize={this.randomize}
+                        />
+                    ))}
                 </div>
             </div>
         )
     }
+}
+
+// function switchValue(value) {
+
+// }
+
+function randomize(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]
+    }
+    // console.log(array)
+    return array;
 }
 
 export default Board;
