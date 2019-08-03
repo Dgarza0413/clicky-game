@@ -10,33 +10,43 @@ class Board extends React.Component {
         icons,
         highScore: 0,
         score: 0,
-        selected: []
+        selected: [],
+        msg: ""
     }
 
-    setValue = (id) => {
-        this.setState({
-            points: this.state.points + 1
-        })
+    randomize = () => {
+        // we use the sort method to combare an a param and b param to return a positive 
+        // number or negative number dictating placement of index
+        this.state.icons.sort(() => 0.5 - Math.random())
     }
 
-    clickSquare = (id) => {
-        const value = this.state.icons.filter(value => value.id !== id)
-        this.setState({
-            value,
-            score: this.state.score + 1,
-            selected: this.value
-        })
-        randomize(this.state.icons)
-        // this.pointCounter()
-        // console.log(value)
-        // console.log(this.state.icons)
-        // console.log(this.state.iconsValue)
-        console.log(this.state.selected)
+    matchScore = () => {
+        // using short circuit operator &&
+        this.state.score >= this.state.highScore && this.setState({ highScore: this.state.score + 1 })
+    }
+
+    clickSquare = id => {
+        // includes determines string found within another string return true or false
+        !this.state.selected.includes(id)
+            ? this.setState({
+                selected: this.state.selected.concat(id),
+                score: this.state.score + 1,
+                msg: ""
+            })
+            : this.setState({
+                selected: [],
+                score: 0,
+                msg: "Game Over"
+            })
+        this.randomize()
+        this.matchScore()
     };
     render() {
         return (
             <div className="game">
-                <Header score={this.state.score} />
+                <Header score={this.state.score}
+                    highScore={this.state.highScore}
+                    msg={this.state.msg} />
                 <div className="game-board">
                     {this.state.icons.map(icon => (
                         <Square key={icon.id}
@@ -51,19 +61,6 @@ class Board extends React.Component {
             </div>
         )
     }
-}
-
-// function switchValue(value) {
-
-// }
-
-function randomize(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]]
-    }
-    // console.log(array)
-    return array;
 }
 
 export default Board;
